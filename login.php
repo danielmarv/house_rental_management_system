@@ -55,7 +55,7 @@ header("location:index.php?page=home");
 		background:#59b6ec61;
 		display: flex;
 		align-items: center;
-		background: url(assets/uploads/blood-cells.jpg);
+		background: url(assets/uploads/1680252120_rms.jpg);
 	    background-repeat: no-repeat;
 	    background-size: cover;
 	}

@@ -90,12 +90,10 @@
                                     <div class="card-body text-white">
                                         <span class="float-right summary_icon"> <i class="fa fa-file-invoice "></i></span>
                                         <h4><b>
-                                            <?php 
-                                             $payment = $conn->query("SELECT sum(amount) as paid FROM payments where date(date_created) = '".date('Y-m-d')."' "); 
-                                             echo $payment->num_rows > 0 ? number_format($payment->fetch_array()['paid'],2) : 0;
-                                             ?>
+                                           
+                                            <?php echo $conn->query("SELECT amount FROM payments")->num_rows ?>
                                         </b></h4>
-                                        <p><b>Payments This Month</b></p>
+                                        <p><b>Payments Made</b></p>
                                     </div>
                                 </div>
                                 <div class="card-footer">

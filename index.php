@@ -5,6 +5,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link rel="shortcut icon" href="/assets/uploads/1680252120_rms.jpg" type="image/x-icon">
 
   <title><?php echo isset($_SESSION['system']['name']) ? $_SESSION['system']['name'] : '' ?></title>
  	

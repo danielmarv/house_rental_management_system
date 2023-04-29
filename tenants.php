@@ -40,7 +40,7 @@
 								while($row=$tenant->fetch_assoc()):
 									$months = abs(strtotime(date('Y-m-d')." 23:59:59") - strtotime($row['date_in']." 23:59:59"));
 									$months = floor(($months) / (30*60*60*24));
-									$payable = $row['price'] * $months;
+									$payable = $row['price'];
 									$paid = $conn->query("SELECT SUM(amount) as paid FROM payments where tenant_id =".$row['id']);
 									$last_payment = $conn->query("SELECT * FROM payments where tenant_id =".$row['id']." order by unix_timestamp(date_created) desc limit 1");
 									$paid = $paid->num_rows > 0 ? $paid->fetch_array()['paid'] : 0;

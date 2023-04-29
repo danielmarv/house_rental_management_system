@@ -304,7 +304,7 @@ Class Action {
 		$months = abs(strtotime(date('Y-m-d')." 23:59:59") - strtotime($date_in." 23:59:59"));
 		$months = floor(($months) / (30*60*60*24));
 		$data['months'] = $months;
-		$payable= abs($price * $months);
+		$payable= abs($price);
 		$data['payable'] = number_format($payable,2);
 		$paid = $this->db->query("SELECT SUM(amount) as paid FROM payments where id != '$pid' and tenant_id =".$id);
 		$last_payment = $this->db->query("SELECT * FROM payments where id != '$pid' and tenant_id =".$id." order by unix_timestamp(date_created) desc limit 1");
